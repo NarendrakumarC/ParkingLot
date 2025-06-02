@@ -1,17 +1,36 @@
 package model;
 
 import enums.ParkingLotStatus;
+import enums.SpotAssigmentStrategyType;
 
 import java.util.List;
 
 public class ParkingLot extends  BaseModel {
 
+    private Long parkingLotId;
     private List<ParkingFloor> parkingFloors;
     private ParkingLotStatus parkingLotStatus;
     private List<Gate> gates;
     private ParkingLotManager parkingLotManager;
     private String address;
     private Integer capacity;
+    private SpotAssigmentStrategyType spotAssigmentStrategyType;
+
+    public Long getParkingLotId() {
+        return parkingLotId;
+    }
+
+    public void setParkingLotId(Long parkingLotId) {
+        this.parkingLotId = parkingLotId;
+    }
+
+    public SpotAssigmentStrategyType getSpotAssigmentStrategyType() {
+        return spotAssigmentStrategyType;
+    }
+
+    public void setSpotAssigmentStrategyType(SpotAssigmentStrategyType spotAssigmentStrategyType) {
+        this.spotAssigmentStrategyType = spotAssigmentStrategyType;
+    }
 
     public List<ParkingFloor> getParkingFloors() {
         return parkingFloors;

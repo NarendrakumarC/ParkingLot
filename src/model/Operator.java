@@ -4,6 +4,10 @@ public class Operator extends BaseModel{
     private String name;
     private String employeeId;
 
+    public Operator(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

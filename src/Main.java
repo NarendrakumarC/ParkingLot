@@ -1,15 +1,31 @@
+import controller.TicketController;
+import dtos.IssueTicketRequestDTO;
+import dtos.IssueTicketResponseDTO;
+import enums.VehicalType;
+import repositories.*;
+import service.TicketService;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        GateRepository gateRepository = new GateRepository();
+        ParkingSpotRepository parkingSpotRepository = new ParkingSpotRepository();
+        ParkingLotRepository parkingLotRepository = new ParkingLotRepository();
+        TicketRepository ticketRepository = new TicketRepository();
+        VehicalRepository vehicalRepository = new VehicalRepository();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        TicketService ticketService = new TicketService(gateRepository,parkingLotRepository,ticketRepository,vehicalRepository);
+        TicketController  ticketController = new TicketController(ticketService);
+        IssueTicketRequestDTO requestDTO = new IssueTicketRequestDTO();
+        requestDTO.setVehicalOwnerName("Narendra");
+        requestDTO.setVehicalNumber("KA052221");
+        requestDTO.setVehicalType(VehicalType.SUV);
+        requestDTO.setParkingLotId(1L);
+        requestDTO.setGateId(2L);
+        IssueTicketResponseDTO responseDTO = ticketController.issueTicket(requestDTO);
+        System.out.println(responseDTO.toString());
+        System.out.println(responseDTO.getResponseStatus());
+
     }
 }

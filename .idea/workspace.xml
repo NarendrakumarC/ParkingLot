@@ -5,35 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07dfa523-cdd5-4826-aaea-68c2f5ebbc34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParkingLot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/BillStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/GateStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/GateType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/ParkingLotStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/ParkingSpotStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/PaymentMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/PaymentStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/TicketStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enums/VehicalType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/BaseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Gate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Operator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Owner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ParkingFloor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ParkingLot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ParkingLotManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/ParkingSpot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Vehical.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Strategies/CheapestSpotAssigmentStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Strategies/NearestSpotAssigmentStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Strategies/SpotAssigmentStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/IssueTicketRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/IssueTicketResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dtos/ResponseStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enums/SpotAssigmentStrategyType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/GateNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/factory/SpotAssigmentFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/GateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/ParkingLotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/ParkingSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repositories/VehicalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/TicketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Gate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Operator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ParkingFloor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ParkingFloor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ParkingSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ParkingSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Ticket.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -51,6 +48,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NarendrakumarC"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NarendrakumarC/ParkingLot.git",
+    "accountId": "3ff3066c-dcd1-4908-945c-000015853b47"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
 }]]></component>
@@ -64,9 +73,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Narendra_Workspace/ParkingLot/src/Main.java"
   }
@@ -104,10 +113,28 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/repositories/GateRepository.java</url>
+          <line>19</line>
+          <properties class="repositories.GateRepository" method="findByGateId">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Strategies/NearestSpotAssigmentStrategy.java</url>
+          <line>23</line>
+          <properties class="Strategies.NearestSpotAssigmentStrategy" method="assignSpot">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/service/TicketService.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

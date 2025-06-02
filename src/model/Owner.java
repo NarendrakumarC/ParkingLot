@@ -5,6 +5,16 @@ public class Owner extends BaseModel{
     private String address;
     private String phoneNo;
 
+    public Owner(String name) {
+        this.name = name;
+    }
+
+    public Owner(String name, String address, String phoneNo) {
+        this.name = name;
+        this.address = address;
+        this.phoneNo = phoneNo;
+    }
+
     public String getName() {
         return name;
     }

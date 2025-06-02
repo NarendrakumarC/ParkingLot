@@ -6,6 +6,10 @@ public class ParkingFloor extends BaseModel{
     private Integer floorNo;
     private List<ParkingSpot> parkingSpots;
 
+    public ParkingFloor(Integer floorNo) {
+        this.floorNo = floorNo;
+    }
+
     public Integer getFloorNo() {
         return floorNo;
     }

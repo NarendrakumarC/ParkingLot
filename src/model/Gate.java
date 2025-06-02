@@ -4,16 +4,23 @@ import enums.GateStatus;
 import enums.GateType;
 
 public class Gate extends BaseModel{
-    private Integer gateNo;
+    private Long gateNo;
     private Operator operator;
     private GateStatus gateStatus;
     private GateType gateType;
+    private ParkingFloor parkingFloor;
 
-    public Integer getGateNo() {
+    public Gate(Long gateNo, Operator operator, GateStatus gateStatus) {
+        this.gateNo = gateNo;
+        this.operator = operator;
+        this.gateStatus = gateStatus;
+    }
+
+    public Long getGateNo() {
         return gateNo;
     }
 
-    public void setGateNo(Integer gateNo) {
+    public void setGateNo(Long gateNo) {
         this.gateNo = gateNo;
     }
 

@@ -1,6 +1,7 @@
 package model;
 
 import enums.ParkingSpotStatus;
+import enums.SpotAssigmentStrategyType;
 import enums.VehicalType;
 
 public class ParkingSpot extends BaseModel{
@@ -8,6 +9,7 @@ public class ParkingSpot extends BaseModel{
     private ParkingFloor parkingFloor;
     private Integer spotNo;
     private VehicalType vehicalType;
+
 
     public ParkingSpotStatus getParkingSpotStatus() {
         return parkingSpotStatus;
